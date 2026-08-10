@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kurýr One | Rychlý rozvoz & osobní kurýr</title>
+<meta name="description" content="Kurýr One – rychlý rozvoz jídla, drobných nákupů a osobní kurýr v okolí Sázavy a Zásmuk.">
+<style>
+:root{
+  --red:#c95b63; --dark:#202124; --cream:#fffaf7; --line:#ead9d5;
+  --muted:#686868; --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);
+  color:var(--dark);line-height:1.55;
+}
+.container{max-width:1050px;margin:auto;padding:0 20px}
+header{
+  background:linear-gradient(135deg,#fff,#fff3ef);
+  border-bottom:1px solid var(--line);padding:18px 0;position:sticky;top:0;z-index:10;
+}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-size:25px;font-weight:900;color:var(--red);letter-spacing:.5px}
+nav a{color:var(--dark);text-decoration:none;margin-left:18px;font-weight:700}
+.hero{padding:75px 0 55px;text-align:center}
+.badge{display:inline-block;background:#f5dadd;color:#a74650;padding:8px 15px;border-radius:30px;font-weight:800}
+h1{font-size:clamp(40px,7vw,68px);line-height:1.02;margin:18px 0 15px}
+h1 span{color:var(--red)}
+.hero p{max-width:700px;margin:0 auto 28px;color:var(--muted);font-size:19px}
+.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:14px 23px;border-radius:12px;text-decoration:none;font-weight:800;
+  border:2px solid var(--red);
+}
+.btn.primary{background:var(--red);color:white}
+.btn.secondary{color:var(--red);background:white}
+section{padding:55px 0}
+.section-title{text-align:center;margin-bottom:30px}
+.section-title h2{font-size:34px;margin:0 0 8px}
+.section-title p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{
+  background:white;border:1px solid var(--line);border-radius:18px;padding:24px;
+  box-shadow:0 8px 25px rgba(50,20,20,.05);
+}
+.price-card{position:relative}
+.zone{color:var(--red);font-weight:900;font-size:20px;margin-bottom:6px}
+.price{position:absolute;right:22px;top:22px;font-size:22px;font-weight:900}
+.km{font-weight:700;margin-bottom:10px}
+.card p{margin:6px 0;color:var(--muted)}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feature h3{margin:8px 0}.feature p{color:var(--muted)}
+.icon{font-size:30px}
+.contact{
+  background:var(--dark);color:white;border-radius:25px;padding:42px;text-align:center;
+}
+.contact p{color:#ddd}.phone{font-size:clamp(30px,6vw,48px);font-weight:900;letter-spacing:1px;margin:15px 0}
+.contact .btn.secondary{background:white}
+footer{text-align:center;color:var(--muted);padding:28px 0 40px;font-size:14px}
+@media(max-width:700px){
+  nav{display:none}.grid,.features{grid-template-columns:1fr}
+  .hero{padding-top:55px}.card{padding:20px}.price{position:static;margin-top:8px}
+  .contact{padding:30px 18px}
+}
+
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.review .stars{color:#d39a27;font-size:22px;letter-spacing:2px}
+.review .text{font-size:16px;margin:12px 0;color:#444}
+.review .name{font-weight:900}
+.review .note{font-size:13px;color:var(--muted)}
+@media(max-width:700px){.reviews{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">KURÝR ONE</div>
+    <nav>
+      <a href="#cenik">Ceník</a>
+      <a href="#sluzby">Služby</a>
+      <a href="#recenze">Recenze</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container">
+    <div class="badge">🚗 Rychlý rozvoz & osobní kurýr</div>
+    <h1>Kurýr <span>One</span></h1>
+    <p>Potřebujete dovézt jídlo, drobný nákup nebo zásilku? Ozvěte se nám a domluvíme rozvoz podle vašich potřeb.</p>
+    <div class="buttons">
+      <a class="btn primary" href="tel:+420735036554">📞 Zavolat</a>
+      <a class="btn secondary" href="https://wa.me/420735036554">💬 WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section id="cenik">
+  <div class="container">
+    <div class="section-title">
+      <h2>Přehledný ceník rozvozu</h2>
+      <p>Start ze Sázavy / Zásmuk</p>
+    </div>
+
+    <div class="grid">
+      <div class="card price-card">
+        <div class="zone">ZÓNA 1 · Vnitřní město</div>
+        <div class="price">39 Kč</div>
+        <div class="km">Sázava / Zásmuky do 4 km</div>
+        <p><b>Pokrývá:</b> Sázava, Černé Budy, Dojetřice, Bělokozly, Zásmuky</p>
+      </div>
+      <div class="card price-card">
+        <div class="zone">ZÓNA 2 · Blízké okolí</div>
+        <div class="price">69 Kč</div>
+        <div class="km">Do 8 km</div>
+        <p><b>Pokrývá:</b> Samopše, Mrchojedy, Talmberk, Choratice, Radvanice, Nechybа, Xaverov, Stříbrná Skalice, Bečváry</p>
+      </div>
+      <div class="card price-card">
+        <div class="zone">ZÓNA 3 · Střední okruh</div>
+        <div class="price">99 Kč</div>
+        <div class="km">Do 13 km</div>
+        <p><b>Pokrývá:</b> Rataje nad Sázavou, Vlkančice, Úžice, Ostředek, Vodslivy, Mělník, Nesměň</p>
+      </div>
+      <div class="card price-card">
+        <div class="zone">ZÓNA 4 · Širší okruh</div>
+        <div class="price">139 Kč</div>
+        <div class="km">Do 17 km</div>
+        <p><b>Pokrývá:</b> Uhlířské Janovice, Ondřejov, Kozojedy, Divišov, Chocerady</p>
+      </div>
+      <div class="card price-card">
+        <div class="zone">ZÓNA 5 · Vzdálené obce</div>
+        <div class="price">199 Kč</div>
+        <div class="km">Nad 17 km</div>
+        <p><b>Pokrývá:</b> Vzdálenější obce podle individuální domluvy.</p>
+      </div>
+      <div class="card">
+        <div class="zone">Individuální rozvoz</div>
+        <div class="km">Potřebujete něco mimo ceník?</div>
+        <p>Napište nebo zavolejte. Vzdálenější rozvoz naceníme předem podle trasy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sluzby">
+  <div class="container">
+    <div class="section-title">
+      <h2>Co rozvážíme?</h2>
+      <p>Rychle, pohodlně a po domluvě.</p>
+    </div>
+    <div class="features">
+      <div class="card feature">
+        <div class="icon">🍕</div>
+        <h3>Hotová jídla</h3>
+        <p>Obědy, večeře, pizza, kebab, minutky a další jídlo z podniků.</p>
+      </div>
+      <div class="card feature">
+        <div class="icon">🛒</div>
+        <h3>Drobné nákupy</h3>
+        <p>Základní potraviny, pečivo a další běžné drobné nákupy.</p>
+      </div>
+      <div class="card feature">
+        <div class="icon">📦</div>
+        <h3>Osobní kurýr</h3>
+        <p>Potřebujete něco převézt? Domluvte si individuální kurýrní službu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="card">
+      <h2>Proč zvolit Kurýr One?</h2>
+      <p>⚡ <b>Rychlý dojezd:</b> Snažíme se doručovat co nejrychleji.</p>
+      <p>📍 <b>Přehledný ceník:</b> Cenu rozvozu znáte předem.</p>
+      <p>🤝 <b>Férový přístup:</b> Vzdálenější rozvozy řešíme individuální domluvou.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="recenze">
+  <div class="container">
+    <div class="section-title">
+      <h2>⭐ Recenze zákazníků</h2>
+      <p>Vaše spokojenost je pro nás důležitá.</p>
+    </div>
+    <div class="reviews">
+      <div class="card review">
+        <div class="stars">★★★★★</div>
+        <div class="text">„Rychlý rozvoz a příjemné jednání. Objednávka dorazila přesně podle domluvy.“</div>
+        <div class="name">— Zákazník</div>
+      </div>
+      <div class="card review">
+        <div class="stars">★★★★★</div>
+        <div class="text">„Super služba, když se mi nechce nikam jezdit. Určitě využiju znovu.“</div>
+        <div class="name">— Zákazník</div>
+      </div>
+      <div class="card review">
+        <div class="stars">★★★★★</div>
+        <div class="text">„Férová cena, rychlá domluva a doručení. Doporučuji.“</div>
+        <div class="name">— Zákazník</div>
+      </div>
+    </div>
+    <p class="note" style="text-align:center;margin-top:18px;">Ukázkové recenze – před zveřejněním webu je nahraďte skutečnými recenzemi zákazníků.</p>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="container">
+    <div class="contact">
+      <h2>Potřebujete rozvoz?</h2>
+      <p>Zavolejte nám nebo napište na WhatsApp.</p>
+      <div class="phone">+420 735 036 554</div>
+      <div class="buttons">
+        <a class="btn primary" href="tel:+420735036554">📞 Zavolat</a>
+        <a class="btn secondary" href="https://wa.me/420735036554">💬 Napsat na WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  © 2026 Kurýr One · Rychlý rozvoz & osobní kurýr
+</footer>
+</body>
+</html>
